@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
+gem 'rails', '5.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -35,6 +36,26 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+# learn-rails
+# helps to use Rails without a database
+gem 'activerecord-tableless' 
+# front-end framework
+gem 'foundation-rails'
+# accoess to MailChimp API
+gem 'gibbon'
+# use Google Drive spreadsheets for data storage
+gem 'google_drive'
+# for static pages 
+gem 'high_voltage' 
+# for forms made easy
+gem 'simple_form' 
+group :development do
+  gem 'better_errors' #when things go wrong
+  gem 'quiet_assets' # suppresses distracting messages in log
+  gem 'rails_layout' # generates files for application layout
+end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
